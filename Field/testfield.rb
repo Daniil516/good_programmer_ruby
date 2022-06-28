@@ -1,4 +1,15 @@
-# 1 способ
-puts File.readlines('./folder/file.txt', mode: 'r', encoding: 'UTF-8')
-# 2 способ
-puts File.readlines('folder/file.txt', mode: 'r', encoding: 'UTF-8')
+string1 = 'Я первая строка'
+
+class MyClass
+  def initialize
+    @string2 = 'Я вторая строка'
+  end
+
+  def print_string1
+    puts string1
+  end
+end
+
+my_class = MyClass.new
+p @string2
+my_class.print_string1
