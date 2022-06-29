@@ -1,8 +1,11 @@
-(1..100).each do |i|
-    if i % 5 == 0 && i % 3 == 0
+(1..100).each do |number|
+    if (number % 5).zero? && (number % 3).zero?
       puts "тыры-пыры"
+    elsif (number % 3).zero?
+      puts "тыры"
+    elsif (number % 5).zero?
+      puts "пыры"
     else
-      puts "тыры" if i % 3 == 0
-      puts i % 5 == 0 ?  "пыры" :  i
+      puts number
     end
 end
