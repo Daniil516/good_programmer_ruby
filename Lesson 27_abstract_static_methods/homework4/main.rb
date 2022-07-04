@@ -6,4 +6,4 @@ require_relative "lib/product_collection"
 products = ProductCollection.from_dir
 
 
-puts products.sort("price")
+puts products.to_a

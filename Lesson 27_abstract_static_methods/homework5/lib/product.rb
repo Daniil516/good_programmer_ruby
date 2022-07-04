@@ -9,7 +9,7 @@ class Product
   def update(params)
     @name = params[:name] if params[:name]
     @price = params[:price] if params[:price]
-    @amount = params[:amount] if params[:amount]
+    @amount_on_warehouse += params[:amount] if params[:amount]
   end
 
   def self.from_file(path)

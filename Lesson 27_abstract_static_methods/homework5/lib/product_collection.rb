@@ -11,6 +11,8 @@ class ProductCollection
                          Book.from_file(product_path)
                        elsif product_path.include?("films")
                          Film.from_file(product_path)
+                       elsif product_path.include?("albums")
+                         Album.from_file(product_path)
                        end
          end
     self.new(products)
