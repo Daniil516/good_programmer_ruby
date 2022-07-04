@@ -1,5 +1,5 @@
 class Product
-  attr_writer :name, :price, :amount_on_warehouse
+  attr_accessor :name, :price, :amount_on_warehouse
   def initialize(params)
     @name = params[:name]
     @price = params[:price]
@@ -12,7 +12,11 @@ class Product
     @amount = params[:amount] if params[:amount]
   end
 
+  def self.from_file(path)
+    raise "NotImplementedError"
+  end
+
   def to_s
-    #abstract
+    "price: #{@price}$. (warehouse: #{@amount_on_warehouse})"
   end
 end
