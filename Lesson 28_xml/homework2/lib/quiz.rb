@@ -6,7 +6,6 @@ class Quiz
   end
 
   def check_answer(user_answer, question)
-
     if user_answer.downcase == question.answer
       @correct_answers += 1
       @final_points += question.points
@@ -14,7 +13,6 @@ class Quiz
     else
       "Неправильно. Ответ - #{question.answer}"
     end
-
   end
 
 end

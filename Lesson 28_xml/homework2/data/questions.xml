@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<questions>
+  <question>
+    <text>Первый правитель Новгорода?</text>
+    <answer>рюрик</answer>
+    <points>2</points>
+  </question>
+  <question>
+    <text>Год создания февральской республики?</text>
+    <answer>1917</answer>
+    <points>3</points>
+  </question>
+  <question>
+    <text>Кто написал "1984"?</text>
+    <answer>оруэлл</answer>
+    <points>5</points>
+  </question>
+  <question>
+    <text>Сколько сантиметров в метре?</text>
+    <answer>100</answer>
+    <points>1</points>
+  </question>
+  <question>
+    <text>Кто отменил крепостное право?</text>
+    <answer>александр 2</answer>
+    <points>3</points>
+  </question>
+  <question>
+    <text>Имя создатель теории относительности?</text>
+    <answer>альберт</answer>
+    <points>5</points>
+  </question>
+  <question>
+    <text>Кто ехал через реку?</text>
+    <answer>грека</answer>
+    <points>2</points>
+  </question>
+</questions>

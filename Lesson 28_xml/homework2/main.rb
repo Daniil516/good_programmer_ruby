@@ -1,3 +1,5 @@
+require "rexml/document"
+require "date"
 require_relative "lib/question"
 require_relative "lib/quiz"
 
@@ -10,24 +12,29 @@ if (Gem.win_platform?)
   end
 end
 
-#Получаем все имена файлов с вопросами
-absolute_path = File.dirname(__FILE__)
-files = Dir.glob("#{absolute_path}/data/*.txt")
-
-#Считываем все файлы и приводим к массиву объектов типа Question
-all_questions = files.map do |question_path|
-  file_in_array = IO.readlines(question_path, encoding: "UTF-8", chomp: true)
-  Question.new(file_in_array[0], file_in_array[1], file_in_array[2])
+#Парсим xml doc с вопросами в массив объектов Question
+doc = REXML::Document.new File.new( "#{__dir__}/data/questions.xml", mode: "r", encoding: "UTF-8", chomp: true )
+all_questions = []
+doc.elements.each("questions/question") do |item|
+  all_questions << Question.new( item.elements["text"].text, item.elements["answer"].text, item.elements["points"].text )
 end
+
+puts "Добро пожаловать в викторину. На каждый ответ даётся 10 секунд..."
+sleep(3)
+puts "Время пошло!"
 
 #Основная логика викторины
 current_quiz = Quiz.new
 all_questions = all_questions.sample(5)
 all_questions.each do |question|
   puts question.text
+  start_time = Time.now
   puts current_quiz.check_answer($stdin.gets.chomp, question)
+  if (Time.now.to_f - start_time.to_f) > 10
+    puts "Время на вопрос вышло!!! Викторина окончена."
+    break
+  end
 end
 
 puts "Правильных ответов: #{current_quiz.correct_answers}"
 puts "Вы набрали: #{current_quiz.final_points} баллов"
-
