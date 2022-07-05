@@ -3,23 +3,21 @@ class ProductCollection
     @products = products
   end
 
-  def self.from_dir
-    all_product_paths = Dir.glob("data/**/*.txt")
+  def self.from_dir(root_path)
     products = []
-         all_product_paths.each do |product_path|
-           products << if product_path.include?("books")
-                         Book.from_file(product_path)
-                       elsif product_path.include?("films")
-                         Film.from_file(product_path)
-                       elsif product_path.include?("albums")
-                         Album.from_file(product_path)
-                       end
-         end
-    self.new(products)
+    Product.get_types.each do |product, product_class|#Пробегаемся по каждому продукту
+      Dir["#{root_path}/data/#{product}/*.txt"].each { |file_path| products << product_class.from_file("#{file_path}") }
+    end
+    self.new(products)#Возвращаем все продукты, которые есть
   end
 
   def sort(by)
-    @products.sort_by!{ |element| element.send(by)}#converting string to method_name
+    if Product.method_defined? by
+      @products.sort_by!{ |element| element.send(by) }#converting string to method_name
+    else
+      warn "Product can't sort by chosen parameter. Default products list is returned"
+      @products
+    end
   end
 
   def to_a

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<business_card name="Daniil" surname="Grishchenko" middlename="Grigorevich">
+<business_card>
+  <name>Daniil</name>
+  <sur_name>Grishchenko</sur_name>
+  <middle_name>Grigorevich</middle_name>
   <phone_number>+79851274114</phone_number>
   <email>grishchenko_daniil_1@mail.ru</email>
-  <post>Intern Ruby programmer</post>
+  <post>Intern Ruby developer</post>
 </business_card>
