@@ -1,9 +1,6 @@
-<?xml version='1.0' encoding='UTF-8'?> 
+<?xml version='1.0' encoding='UTF-8'?>
 <wishes>
- <wish date='01.01.2023'>
-   I&apos;d like leave Russia 
- </wish>
- <wish date='09.09.2022'>
-  I would like to order some pizza
- </wish>
+  <wish date='01.01.2023'>
+    I would like to leave Russia
+  </wish>
 </wishes>

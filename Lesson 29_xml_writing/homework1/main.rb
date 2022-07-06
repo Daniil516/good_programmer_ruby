@@ -1,6 +1,14 @@
 require "date"
 require "rexml/document"
 
+#If file doesn't exist adding it
+unless File.exist?("#{__dir__}/wishes.xml")
+  File.open("#{__dir__}/wishes.xml", 'w:UTF-8') do |file|
+    file.puts "<?xml version='1.0' encoding='UTF-8'?>"
+    file.puts '<wishes></wishes>'
+  end
+end
+
 puts "There are wishes in this chest..."
 sleep(2)
 puts "What do you want?"
@@ -24,7 +32,7 @@ new_wish.text = user_wish
 
 #Saving changes
 file = File.new("#{__dir__}/wishes.xml", "w:UTF-8")
-doc.write(file, 1)#second argument - distance between elements
+doc.write(file, 2)#second argument - space from start
 file.close
 
 puts "Your wish has been fully recorded"
