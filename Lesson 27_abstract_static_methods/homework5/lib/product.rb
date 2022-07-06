@@ -1,19 +1,16 @@
 class Product
-  attr_accessor :name, :price, :amount_on_warehouse
+  attr_accessor :name, :price, :amount
+
   def initialize(params)
     @name = params[:name]
     @price = params[:price]
-    @amount_on_warehouse = params[:amount_on_warehouse]
-  end
-
-  def self.get_types
-    {"books" => Book, "films" => Film, "albums" => Album}
+    @amount = params[:amount]
   end
 
   def update(params)
     @name = params[:name] if params[:name]
     @price = params[:price] if params[:price]
-    @amount_on_warehouse += params[:amount] if params[:amount]
+    @amount = @amount + params[:amount] if params[:amount]
   end
 
   def self.from_file(path)
@@ -21,6 +18,6 @@ class Product
   end
 
   def to_s
-    "price: #{@price}$. (warehouse: #{@amount_on_warehouse})"
+    "price: #{@price}$. (warehouse: #{@amount})"
   end
 end
