@@ -1,7 +1,7 @@
 require_relative "lib/item_of_clothing"
-require_relative "lib/clothes"
+require_relative "lib/clothes_collection"
 
-all_clothes = Clothes.read_files_from_directory("#{__dir__}/data")
+all_clothes = ClothesCollection.read_files_from_directory("#{__dir__}/data")
 
 puts "What is the temperature outside?(Celsius)"
 temperature_outside = $stdin.gets.to_i

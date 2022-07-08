@@ -15,7 +15,7 @@ class ProductCollection
   end
 
   def product_by_index(user_choice)
-    @products[user_choice]
+    @products[user_choice - 1]
   end
 
   def sort!(params)
@@ -29,10 +29,14 @@ class ProductCollection
   end
 
   def to_s
-    @products.map.with_index(1) {|product, index| "#{index}. #{product}" }
+    @products.map.with_index(1) {|product, index| "#{index}. #{product}" }.join("\n")
   end
 
   def to_a
     @products
+  end
+
+  def size
+    @products.length
   end
 end

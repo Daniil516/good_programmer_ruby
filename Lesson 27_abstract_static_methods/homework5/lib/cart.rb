@@ -14,4 +14,8 @@ class Cart
   def to_a
     @shopping_list
   end
+
+  def to_s
+    @shopping_list.join("\n")
+  end
 end
