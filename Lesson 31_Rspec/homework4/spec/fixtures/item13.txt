@@ -1,0 +1,3 @@
+sun glasses
+accessories
+(20, 30)

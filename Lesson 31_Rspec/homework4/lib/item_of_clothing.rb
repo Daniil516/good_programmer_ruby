@@ -1,5 +1,5 @@
 class ItemOfClothing
-  attr_reader :type, :temperature
+  attr_reader :type, :temperature, :name
 
   def initialize(name, type, temperature)
     @name = name

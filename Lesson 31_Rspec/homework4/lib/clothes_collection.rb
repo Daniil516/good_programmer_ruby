@@ -1,5 +1,5 @@
 class ClothesCollection
-
+  attr_reader :clothes
   def initialize(clothes)
     @clothes = clothes
   end

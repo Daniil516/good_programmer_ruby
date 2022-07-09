@@ -1,0 +1,3 @@
+sandals
+footwear
+(15, 30)
