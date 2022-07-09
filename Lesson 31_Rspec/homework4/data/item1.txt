@@ -1,0 +1,3 @@
+winter hat
+headdress
+(-30, 0)

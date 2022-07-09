@@ -1,0 +1,3 @@
+boots
+footwear
+(-30, 0)

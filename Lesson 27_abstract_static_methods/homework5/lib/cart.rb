@@ -16,6 +16,6 @@ class Cart
   end
 
   def to_s
-    @shopping_list.join("\n")
+    @shopping_list.empty? ? "nothing" : @shopping_list.join("\n")
   end
 end
