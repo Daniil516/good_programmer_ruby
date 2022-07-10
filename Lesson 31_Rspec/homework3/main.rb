@@ -12,13 +12,14 @@ all_directors = films.map(&:director).uniq.each.with_index(1) do |director, inde
   puts "#{index}: #{director}"
 end
 
-begin
+user_number = nil
+until (1..all_directors.length).include? user_number do
   puts "Фильм какого режиссера вы хотите посмотреть? Введите номер режиссера из списка"
   user_number = $stdin.gets.to_i
-end until (1..all_directors.length).include? user_number
+end
 
 #Получаем фильм режиссера.
-user_director = films[user_number - 1].director
+user_director = all_directors[user_number - 1]
 # Если фильмов несколько - отбираем случайный
 to_recomend = films.select { |film| film.director == user_director }.sample
 
