@@ -1,0 +1,30 @@
+{
+  "H": {
+    "name": "Hydrogen",
+    "table_number": 1,
+    "discoverer": "Kavendish",
+    "year": 1766,
+    "density": 0.0708
+  },
+  "He": {
+    "name": "Helium",
+    "table_number": 2,
+    "discoverer": "Pierre Jansen",
+    "year": 1868,
+    "density": 0.214
+  },
+  "Li": {
+    "name": "Lithium",
+    "table_number": 3,
+    "discoverer": "Arfvedson",
+    "year": 1817,
+    "density": 0.534
+  },
+  "Bk": {
+  "name": "Berkelium",
+  "table_number": 97,
+  "discoverer": "Seaborg",
+  "year": 1949,
+  "density": 13.25
+  }
+}
