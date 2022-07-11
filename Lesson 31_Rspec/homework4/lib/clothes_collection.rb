@@ -15,7 +15,7 @@ class ClothesCollection
   end
 
   def for_weather(user_temperature)
-    sorted_clothes = sort_clothes_by_types(@clothes)
+    sorted_clothes = sort_clothes_by_types
 
     clothes_by_weather = []
     sorted_clothes.each_key do |type|#puts one item from each type if it is in required temperature
@@ -26,10 +26,11 @@ class ClothesCollection
   end
 
   private
+
   #getting hash of clothes in such form: {type => array of items of that clothes type}
-  def sort_clothes_by_types(clothes)
+  def sort_clothes_by_types
     clothes_by_type = {}
-    clothes.each do |item|
+    @clothes.each do |item|
       clothes_by_type[item.type] = [] unless clothes_by_type.key?(item.type)
       clothes_by_type[item.type] << item
     end
