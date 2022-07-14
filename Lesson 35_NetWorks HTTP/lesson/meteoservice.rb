@@ -47,6 +47,7 @@ forecast = doc.root.elements['REPORT/TOWN/FORECAST']
 min_temp = forecast.elements['TEMPERATURE'].attributes['min']
 max_temp = forecast.elements['TEMPERATURE'].attributes['max']
 
+
 # Записываем максимальную скорость ветра из атриубута max тэга WIND
 max_wind = forecast.elements['WIND'].attributes['max']
 
