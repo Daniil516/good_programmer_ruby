@@ -4,18 +4,28 @@ require "nokogiri"
 require "open-uri"
 
 class Films
-  def initialize(path)
-    @collection = get_collection_from(path)
+  def initialize(collection)
+    @collection = collection
   end
 
-  def get_from_link(path)
-    # Fetch and parse HTML document
-    doc = Nokogiri::HTML(URI.open("https://www.kinopoisk.ru/lists/movies/top500/"))
-
-    # Search for nodes by css
-    doc.css('article h2').each do |link|
-      puts link.content
+  def self.get_from_link(path)
+    #getting data
+    unless File.exist?(path)
+      doc = Nokogiri::HTML(URI.open("https://www.kinopoisk.ru/lists/movies/top500/"))
+      File.write(path, doc)
     end
+    doc = File.open(path) { |f| Nokogiri::XML(f) }
+
+    #parsing every film block info to film objects
+    collection = doc.css(".styles_root__ti07r").map do |film_block|
+      film_name = film_block.css("a span").first.text
+      film_year = film_block.css(".desktop-list-main-info_secondaryText__M_aus").first.text.match(/\d{4}/)
+      film_director = film_block.css(".desktop-list-main-info_truncatedText__IMQRP").first.text.match(/:\s[А-Я\sа-я]+/)
+
+      Film.new(film_name, film_director.to_s.gsub(/:\s/, ""), film_year.to_s)
+    end
+
+    Films.new(collection)
   end
 
   def all_directors
@@ -23,7 +33,7 @@ class Films
   end
 
   def all_directors_print
-    all_directors.each.with_index(1) do |director, index|
+    all_directors.map.with_index(1) do |director, index|
       "#{index}: #{director}"
     end
   end
