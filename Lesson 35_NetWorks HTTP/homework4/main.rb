@@ -10,7 +10,7 @@ end
 
 required_currency = nil
 loop do
-  print "Enter required currency from list(\"ABC\"): "
+  print "Enter required currency from list('ABC'): "
   required_currency = $stdin.gets.chomp.upcase.to_sym
   break if currency.available_currencies.keys.include?(required_currency)
 end
@@ -20,11 +20,10 @@ currency_amount = $stdin.gets.to_i
 puts "How many rubles do you have?"
 rub_amount = $stdin.gets.to_i
 
-portfolio = DualCurrencyPortfolio.new(
-                                {
-                                        currency_amount: currency_amount,
-                                        rub_amount: rub_amount,
-                                        currency_rate: currency.one_currency_rate(required_currency)
-                                       }
-                                     )
-puts portfolio.what_to_do?
+portfolio = DualCurrencyPortfolio.new({ currency_amount: currency_amount, rub_amount: rub_amount,
+                                               currency_rate: currency.one_currency_rate(required_currency) } )
+puts case portfolio.what_to_do?
+when "balanced" then "Your portfolio is already balanced"
+when "sell" then "You should sell #{portfolio.converting_value.round(2)} #{required_currency}"
+when "buy" then "You should buy #{portfolio.converting_value.round(2).abs} #{required_currency}"
+end

@@ -7,15 +7,13 @@ class DualCurrencyPortfolio
 
   def what_to_do?
     if converting_value.abs <= 0.01
-      "Your portfolio is already balanced"
+      "balanced"
     elsif converting_value > 0
-      "You should sell #{converting_value.round(2)} currency"
+      "sell"
     else
-      "You should buy #{converting_value.round(2).abs} currency"
+      "buy"
     end
   end
-
-  private
 
   #Value that need to be sold or bought by user
   def converting_value
