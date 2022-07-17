@@ -14,10 +14,9 @@ until (ALL_DIRECTORS_RANGE).include? user_number do
   user_number = $stdin.gets.to_i
 end
 
-#Получаем фильм режиссера.
 user_director = films.all_directors[user_number - 1]
-# Если фильмов несколько - отбираем случайный
+#Получаем фильм режиссера.Если фильмов несколько - отбираем случайный
 recommended_film = films.to_recomend(user_director)
 
 puts "И сегодня вечером рекомендую посмотреть:"
-puts "#{user_director} - #{recommended_film.film_name} (#{recommended_film.year})"
+puts "#{recommended_film.director} - #{recommended_film.film_name} (#{recommended_film.year})"

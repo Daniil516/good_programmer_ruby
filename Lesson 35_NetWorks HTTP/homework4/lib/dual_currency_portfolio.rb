@@ -7,11 +7,11 @@ class DualCurrencyPortfolio
 
   def what_to_do?
     if converting_value.abs <= 0.01
-      "balanced"
+      :balanced
     elsif converting_value > 0
-      "sell"
+      :sell
     else
-      "buy"
+      :buy
     end
   end
 

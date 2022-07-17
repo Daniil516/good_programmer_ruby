@@ -23,7 +23,7 @@ rub_amount = $stdin.gets.to_i
 portfolio = DualCurrencyPortfolio.new({ currency_amount: currency_amount, rub_amount: rub_amount,
                                                currency_rate: currency.one_currency_rate(required_currency) } )
 puts case portfolio.what_to_do?
-when "balanced" then "Your portfolio is already balanced"
-when "sell" then "You should sell #{portfolio.converting_value.round(2)} #{required_currency}"
-when "buy" then "You should buy #{portfolio.converting_value.round(2).abs} #{required_currency}"
+when :balanced then "Your portfolio is already balanced"
+when :sell then "You should sell #{portfolio.converting_value.round(2)} #{required_currency}"
+when :buy then "You should buy #{portfolio.converting_value.round(2).abs} #{required_currency}"
 end
