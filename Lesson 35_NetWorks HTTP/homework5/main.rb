@@ -2,7 +2,7 @@ require_relative 'lib/film'
 require_relative 'lib/film_collection'
 
 #Получаем список фильмов в виде объектов
-film_collection = FilmCollection.from_kinopoisk("#{__dir__}/data/kinopoisk.html")
+film_collection = FilmCollection.from_kinopoisk
 ALL_DIRECTORS_RANGE = (1..film_collection.all_directors.length)
 #Выводим всех режиссеров
 puts "Программа \"Фильм на вечер\""
