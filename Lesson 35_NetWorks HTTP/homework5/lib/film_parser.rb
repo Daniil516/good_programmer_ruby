@@ -4,12 +4,8 @@ module FilmParser
   KINOPOISK_URL = "https://www.kinopoisk.ru/lists/movies/top500/"
 
   def from_kinopoisk
-    unless File.exist?("#{__dir__}/../data/kinopoisk.html")
-      doc = Nokogiri::HTML(URI.open(KINOPOISK_URL))
-      File.write("#{__dir__}/../data/kinopoisk.html", doc)
-    end
     #parsing every film block info to film objects
-    doc = File.open("#{__dir__}/../data/kinopoisk.html") { |f| Nokogiri::XML(f) }
+    doc = Nokogiri::HTML(URI.open(KINOPOISK_URL))
 
     collection = doc.css(".styles_root__ti07r").map do |film_block|
       name = film_block.css("a span").first.text

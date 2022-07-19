@@ -1,15 +1,15 @@
-require_relative 'lib/film'
-require_relative 'lib/film_collection'
+require_relative "lib/film"
+require_relative "lib/film_collection"
 
 #Получаем список фильмов в виде объектов
 film_collection = FilmCollection.from_kinopoisk
-ALL_DIRECTORS_RANGE = (1..film_collection.all_directors.length)
+ALL_DIRECTORS_RANGE = (1..film_collection.all_directors.size)
 #Выводим всех режиссеров
-puts "Программа \"Фильм на вечер\""
+puts "Программа 'Фильм на вечер'"
 puts film_collection.all_directors_print
 
 user_number = nil
-until (ALL_DIRECTORS_RANGE).include? user_number do
+until ALL_DIRECTORS_RANGE.include?(user_number)
   puts "Фильм какого режиссера вы хотите посмотреть? Введите номер режиссера из списка"
   user_number = $stdin.gets.to_i
 end
