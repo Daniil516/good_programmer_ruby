@@ -1,0 +1,59 @@
+body {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  margin-bottom: 4%;
+  color: #35782C;
+}
+
+img {
+  width: 50%;
+  min-width: 300px;
+  height: auto;
+  border-radius: 8%;
+  box-shadow: 10px 10px 10px black;
+  margin-bottom: 2%;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  color: #0F8200;
+}
+
+.ingredients {
+  list-style-type: '— ';
+  font-size: 30px;
+  color: #383838;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+}
+.ingredients li {
+  margin-bottom: 10px;
+}
+.recipe {
+  font-size: 20px;
+  font-family: 'Ibarra Real Nova', serif;
+  width: 50%;
+  min-width: 300px;
+  margin: auto;
+}
+
+.recipe h2 {
+  margin-bottom: 5%;
+}
+.recipe li {
+  margin-bottom: 2%;
+  color: #383838;
+}
+.recipe img {
+  margin-left: -40px;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+
