@@ -1,0 +1,19 @@
+.good-notification {
+  padding: 20px;
+  background-color: #1BBC9B;
+  width: 30%;
+  margin: auto;
+  color: white;
+  border: 2px darkgreen solid;
+  border-radius: 15px;
+}
+
+.bad-notification {
+  padding: 20px;
+  background-color: darkred;
+  width: 30%;
+  margin: auto;
+  color: white;
+  border: 2px red solid;
+  border-radius: 15px;
+}
