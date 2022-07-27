@@ -1,8 +1,11 @@
 .paragraph {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   background-color: rgba(222, 222, 215, 0.70);
   border-radius: 10px;
   padding: 15px;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .paragraph:after {
@@ -12,7 +15,7 @@
 }
 
 .paragraph img {
-  width: 250px;
+  width: 230px;
   height: 100%;
   /*default*/
   float: left;
@@ -26,5 +29,3 @@
   margin-left: 20px;
   margin-right: 0;
 }
-
-

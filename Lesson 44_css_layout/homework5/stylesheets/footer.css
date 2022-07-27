@@ -1,0 +1,13 @@
+footer {
+  border-top: 3px black dashed;
+  background-image: url("../images/footer-background.jpeg");
+  border-image-repeat: repeat;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 35px;
+  color: darkgreen;
+}
