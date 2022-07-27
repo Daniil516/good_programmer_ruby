@@ -1,0 +1,29 @@
+.paragraph {
+  margin-bottom: 40px;
+  background-color: rgba(222, 222, 215, 0.70);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.paragraph:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.paragraph img {
+  width: 250px;
+  height: 100%;
+  /*default*/
+  float: left;
+  margin-right: 20px;
+  border-radius: 50px;
+  border: 2px darkgreen solid;
+}
+
+.paragraph-to-right img {
+  float: right;
+  margin-left: 20px;
+}
+
+
