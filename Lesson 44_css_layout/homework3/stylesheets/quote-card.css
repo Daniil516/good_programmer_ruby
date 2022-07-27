@@ -1,0 +1,15 @@
+.quote-card, .quote-text {
+  width: 500px;
+  height: 300px;
+}
+.quote-card {
+  background-image: url("../images/bubbles.jpg");
+  background-size: cover;
+}
+
+.quote-text{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+
