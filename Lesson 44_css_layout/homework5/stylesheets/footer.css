@@ -4,6 +4,7 @@ footer {
   border-image-repeat: repeat;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-top: auto;
 }
 
 .footer-text {
