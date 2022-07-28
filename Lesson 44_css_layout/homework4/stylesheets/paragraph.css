@@ -11,7 +11,7 @@
   clear: both;
 }
 
-.paragraph img {
+.paragraph-image {
   width: 250px;
   height: 100%;
   /*default*/
@@ -21,10 +21,8 @@
   border: 2px darkgreen solid;
 }
 
-.paragraph-to-right img {
+.paragraph-to-right .paragraph-image{
   float: right;
   margin-left: 20px;
   margin-right: 0;
 }
-
-
