@@ -1,0 +1,57 @@
+header {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-bottom: 1px darkgrey solid;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  margin-top: 15px;
+  gap: 15px;
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: bold;
+}
+
+.header-left-part {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  width: 70px;
+  height: auto;
+}
+
+.site-name {
+  align-self: center;
+  color: cornflowerblue;
+  font-size: 26px;
+}
+
+.header-right-part {
+  display: flex;
+  gap: 130px;
+  align-items: center;
+}
+
+.header-right-part a {
+  text-decoration: none;
+  color: cornflowerblue;
+}
+
+@media screen  and (max-width: 400px){
+  .header-right-part {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .header-left-part, .header-right-part {
+    margin: auto;
+    width: 60%;
+    text-align: center;
+  }
+
+  .header-right-part {
+    position: relative;
+    left: 27px;
+  }
+}

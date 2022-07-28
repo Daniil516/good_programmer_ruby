@@ -1,0 +1,26 @@
+.purchase-section {
+  text-align: center;
+}
+
+.contacts {
+  max-width: 800px;
+  color: rebeccapurple;
+  font-family: 'Inconsolata', monospace;
+  font-size: 25px;
+  line-height: 40px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.buy-button {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 40px;
+  padding: 30px;
+  background-color: rgba(255,0,9,0.88);
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  box-shadow: 5px 5px 5px darkcyan;
+  margin-bottom: 25px;
+}

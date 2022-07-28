@@ -1,0 +1,47 @@
+.reviews-title {
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: bold;
+  color: cornflowerblue;
+  font-size: 45px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.reviews-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+  margin: auto;
+  gap: 65px;
+  margin-bottom: 70px;
+}
+
+.one-review {
+  background-color: rgba(218,254,255, 0.20);
+  padding: 20px;
+  border-radius: 25px;
+  border: 1px grey solid;
+  box-shadow: 3px 3px 3px purple;
+}
+
+.reviewer-photo {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  min-width: 230px;
+}
+
+.review-author {
+  margin-bottom: 15px;
+}
+
+.reviewer-text {
+  max-width: 250px;
+  color: black;
+  font-family: 'Inconsolata', monospace;
+  font-size: 20px;
+  line-height: 25px;
+}
