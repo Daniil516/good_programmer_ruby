@@ -9,14 +9,13 @@
   <title>homework</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&family=Inconsolata&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/features-section.css">
   <link rel="stylesheet" href="stylesheets/preview-section.css">
   <link rel="stylesheet" href="stylesheets/reviews-section.css">
   <link rel="stylesheet" href="stylesheets/purchase-section.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="parallax.js-1.5.0/parallax.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -30,38 +29,9 @@
       <a href=""><h2>Guarantees</h2></a>
     </div>
   </header>
-  <div class="intro-section">
-    <img class="intro-image" src="images/intro-image.jpg" alt="DeLorean">
-    <p class="intro-text">
-      In October 1976, the first prototype DeLorean DMC-12 was completed by William T. Collins, chief engineer and
-      designer (formerly chief engineer at Pontiac). Originally, the car's rear-mounted power plant was to be a Citroën
-      Wankel rotary engine, but was replaced with a French-designed and produced PRV (Peugeot-Renault-Volvo) fuel
-      injected V-6 because of the poor fuel economy of the rotary engine, an important issue at a time of world-wide
-      fuel shortages. Collins and DeLorean envisioned a chassis produced from a new and untested manufacturing
-      technology known as Elastic Reservoir Moulding (ERM), which would contribute to the light-weight characteristics
-      of the car while presumably lowering its production costs. This new technology, for which DeLorean had purchased
-      patent rights, would eventually be found to be unsuitable for mass production.
-      These and other changes to the original concept led to considerable schedule pressures. The entire car was deemed
-      to require almost complete re-engineering, which was turned over to engineer Colin Chapman, founder and owner of
-      Lotus. Chapman replaced most of the unproven material and manufacturing techniques with those currently being
-      employed by Lotus. The backbone chassis is very similar to the Lotus Esprit. The original Giorgetto Giugiaro body
-      design was left mostly intact, as were the distinctive stainless steel outer skin panels and gull-wing doors.
-      The DMC-12 would eventually be built in a factory in Dunmurry, Northern Ireland, a neighborhood a few miles from
-      Belfast city center. Construction on the factory began in October 1978, and although production of the DMC-12 was
-      scheduled to start in 1979, engineering issues and budget overruns delayed production until early 1981. By that
-      time, the unemployment rate was high in Northern Ireland and local residents lined up to apply for jobs at the
-      factory. The production personnel were largely inexperienced, but were paid premium wages and supplied with the
-      best equipment available. Most quality issues were solved by 1982 and the cars were sold from dealers with a 12
-      month, 12,000 mi (19,300 km) warranty and an available five-year, 50,000-mile (80,000 km) service contract.
-      The De Lorean Motor Company went bankrupt in late 1982 following John DeLorean's arrest in October of that year on
-      drug trafficking charges. He was later found not guilty, but it was too late for the DMC-12. Approximately 100
-      partially assembled DMC's on the production line were completed by Consolidated International (now known as Big
-      Lots). The remaining parts from the factory stock, the parts from the US Warranty Parts Center, as well as parts
-      from the original suppliers that had not yet been delivered to the factory were all shipped to Columbus, Ohio in
-      1983–1984. A company called KAPAC sold these parts to retail and wholesale customers via mail order. In 1997, De
-      Lorean Motor Company of Texas acquired this inventory.[2]
-    </p>
-  </div>
+    <div class="intro-section" data-parallax="scroll" data-image-src="images/intro-image.jpg">
+      <p class="intro-text"><span>With an old car, new horizons</span></p>
+    </div>
   <h2 class="features-section-title">What will you get?</h2>
   <div class="features-section">
     <div class="one-feature">
@@ -100,7 +70,6 @@
   <div class="delorean-preview">
     <div class="preview-video">
       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9bCnua1sGaE" title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
 
@@ -131,11 +100,11 @@
   </div>
   <div class="purchase-section">
     <a class="buy-button" href="">Buy one</a>
-    <p class="contacts">
+    <div class="contacts">
       <a href="">Read more</a><br>
-      Order Test Drive - +365 (000) 111-111 55 55 <br>
-      Ask your questions here: delorean-dmc-12@gmail.com
-    </p>
+      <p>Order Test Drive - +365 (000) 111-111 55 55</p>
+      <p>Ask your questions here: delorean-dmc-12@gmail.com</p>
+    </div>
   </div>
 </div>
 </body>

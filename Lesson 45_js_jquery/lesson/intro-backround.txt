@@ -1,0 +1,7 @@
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(rgba(138, 186, 86, 0), rgba(138, 186, 86, 0.3) 95%),
+                    url("bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll, fixed;
+  background-position: 0 0%, center top;

@@ -9,7 +9,7 @@
 
 .features-section {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 60%;
   margin: auto;
@@ -26,12 +26,9 @@
 }
 
 .feature-image {
-  width: 100%;
-  height: auto;
-  max-width: 250px;
+  width: 250px;
   border-radius: 15px;
   margin-bottom: 15px;
-  min-width: 230px;
 }
 
 .feature-text {
@@ -40,4 +37,10 @@
   font-family: 'Inconsolata', monospace;
   font-size: 20px;
   line-height: 25px;
+}
+
+@media screen and (max-width: 1081px) {
+  .features-section {
+    justify-content: center;
+  }
 }
